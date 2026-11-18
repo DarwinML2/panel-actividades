@@ -10,12 +10,31 @@
 </head>
 
 <body>
-    <h1>Practicas de curso de programacion ITLA</h1>
-    <section>
-        <h2>Modulo 1</h2>
-        <a href="modulo1.html">CLICK AQUI PARA VER MAS.</a>
+    <header>
+        <h1>Mi Panel De Actividades</h1>
+        <nav>
+            <a href="#tareas">Tareas</a>
+            <a href="#AgregarTarea">Agregar tarea</a>
+        </nav>
+    </header>
+    <main>
+        <section id="tareas">
+            <h2>Tareas</h2>
+            <ul>
+                <li>
+                    Comprar Cafe
+                    <label for="prioridad">MEDIA</label>
+                    <button>Completar</button>
+                </li>
+            </ul>
+        </section>
+        <section id="AgregarTarea">
+            <form action="submit">
+                <input type="text" placeholder="Agrega actividad.">
+            </form>
+        </section>
 
-    </section>
+    </main>
 
 </body>
 
