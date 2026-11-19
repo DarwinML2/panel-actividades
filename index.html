@@ -40,19 +40,25 @@
         </section>
         <section id="AgregarTarea">
             <h2>Agregar Tarea</h2>
-            <form action="submit">
-                <input type="text" placeholder="Agrega actividad.">
+            <form>
+                <label for="titulo">Titulo de tarea</label>
+                <input type="text" placeholder="Titulo de tarea" id="titulo" required maxlength="80">
+                <label for="descripcion">Descripcion de la tarea</label>
+                <textarea placeholder="Describe la tarea" id="descripcion"></textarea>
+                <label for="prioridad">Prioridad de la tarea</label>
                 <select name="prioridad" id="prioridad">
-                    <option value="">ALTA</option>
-                    <option value="">MEDIA</option>
-                    <option value="">BAJA</option>
+                    <option value="">Alta</option>
+                    <option value="">Media</option>
+                    <option value="">Baja</option>
                 </select>
-                <button>AGREGAR</button>
+                <button>Agregar tarea</button>
             </form>
         </section>
 
     </main>
-
+    <footer>
+        <p>Panel de actividades, hecho con HTML</p>
+    </footer>
 </body>
 
 </html>
