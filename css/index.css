@@ -1,0 +1,16 @@
+body {
+  font-family: system-ui, sans-serif;
+  color: #172033;
+}
+h1,
+h2 {
+  color: navy;
+}
+.lista {
+  border: 1px solid #cbd5e1;
+}
+.tarjeta-actividad {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
