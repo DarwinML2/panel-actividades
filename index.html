@@ -11,36 +11,57 @@
 
 <body>
     <header>
-        <h1>Mi Panel De Actividades</h1>
+        <h1 id="cabecera">Mi Panel De Actividades</h1>
         <nav>
             <a href="#tareas">Tareas</a>
             <a href="#AgregarTarea">Agregar tarea</a>
         </nav>
     </header>
     <main>
-        <section id="tareas" class="lista">
-            <h2>Tareas</h2>
-            <ul>
+        <section id="tareas">
+            <h2 id="cabecera">Tareas</h2>
+            <ul class="lista-actividad">
                 <li class="tarjeta-actividad">
-                    Comprar Cafe
-                    <label for="prioridad">MEDIA</label>
-                    <button>Completar</button>
+                    <span class="actividad-titulo">Hacer comida</span>
+                    <div class="actividad-acciones">
+                        <span for="prioridad">MEDIA</span>
+                        <button>Completar</button>
+                    </div>
                 </li>
                 <li class="tarjeta-actividad">
-                    Comprar Cafe
-                    <label for="prioridad">MEDIA</label>
-                    <button>Completar</button>
+                    <span class="actividad-titulo">Ir al GYM</span>
+                    <div class="actividad-acciones">
+                        <span for="prioridad">MEDIA</span>
+                        <button>Completar</button>
+                    </div>
                 </li>
                 <li class="tarjeta-actividad">
-                    Comprar Cafe
-                    <label for="prioridad">MEDIA</label>
-                    <button>Completar</button>
+                    <span class="actividad-titulo">Asistir a la Universidad</span>
+                    <div class="actividad-acciones">
+                        <span for="prioridad">MEDIA</span>
+                        <button>Completar</button>
+                    </div>
                 </li>
+                <li class="tarjeta-actividad">
+                    <span class="actividad-titulo">Ir a trabajar</span>
+                    <div class="actividad-acciones">
+                        <span for="prioridad">MEDIA</span>
+                        <button>Completar</button>
+                    </div>
+                </li>
+                <li class="tarjeta-actividad">
+                    <span class="actividad-titulo">Comprar Cafe</span>
+                    <div class="actividad-acciones">
+                        <span for="prioridad">MEDIA</span>
+                        <button>Completar</button>
+                    </div>
+                </li>
+
             </ul>
         </section>
         <section id="AgregarTarea">
-            <h2>Agregar Tarea</h2>
-            <form>
+            <h2 id="cabecera">Agregar Tarea</h2>
+            <form class="agregar-actividad">
                 <label for="titulo">Titulo de tarea</label>
                 <input type="text" placeholder="Titulo de tarea" id="titulo" required maxlength="80">
                 <label for="descripcion">Descripcion de la tarea</label>
@@ -57,7 +78,9 @@
 
     </main>
     <footer>
-        <p>Panel de actividades, hecho con HTML</p>
+        <section class="pie-pagina">
+            <p>Panel de actividades, hecho con HTML</p>
+        </section>
     </footer>
 </body>
 
