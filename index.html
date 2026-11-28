@@ -11,63 +11,50 @@
 
 <body>
     <header>
-        <h1 id="cabecera">Mi Panel De Actividades</h1>
-        <nav>
-            <a href="#tareas">Tareas</a>
-            <a href="#AgregarTarea">Agregar tarea</a>
+        <h1>Mi Panel De Actividades</h1>
+        <nav class="navegacion">
+            <div class="links">
+                <a href="#tareas" class="on">Tareas</a>
+                <a href="#AgregarTarea ">Agregar tarea</a>
+            </div>
         </nav>
     </header>
     <main>
         <section id="tareas">
-            <h2 id="cabecera">Tareas</h2>
+            <h2>Tareas pendientes</h2>
             <ul class="lista-actividad">
                 <li class="tarjeta-actividad">
-                    <span class="actividad-titulo">Hacer comida</span>
+                    <p class="actividad-titulo">Hacer comida</p>
                     <div class="actividad-acciones">
-                        <span for="prioridad">MEDIA</span>
+                        <span class="prioridad prioridad-media">MEDIA</span>
                         <button>Completar</button>
                     </div>
                 </li>
                 <li class="tarjeta-actividad">
-                    <span class="actividad-titulo">Ir al GYM</span>
+                    <p class="actividad-titulo">Ir al gym</p>
                     <div class="actividad-acciones">
-                        <span for="prioridad">MEDIA</span>
+                        <span class="prioridad prioridad-alta">ALTA</span>
                         <button>Completar</button>
                     </div>
                 </li>
                 <li class="tarjeta-actividad">
-                    <span class="actividad-titulo">Asistir a la Universidad</span>
+                    <p class="actividad-titulo">Hablar con la jeva</p>
                     <div class="actividad-acciones">
-                        <span for="prioridad">MEDIA</span>
+                        <span class="prioridad prioridad-baja">BAJA</span>
                         <button>Completar</button>
                     </div>
                 </li>
-                <li class="tarjeta-actividad">
-                    <span class="actividad-titulo">Ir a trabajar</span>
-                    <div class="actividad-acciones">
-                        <span for="prioridad">MEDIA</span>
-                        <button>Completar</button>
-                    </div>
-                </li>
-                <li class="tarjeta-actividad">
-                    <span class="actividad-titulo">Comprar Cafe</span>
-                    <div class="actividad-acciones">
-                        <span for="prioridad">MEDIA</span>
-                        <button>Completar</button>
-                    </div>
-                </li>
-
             </ul>
         </section>
         <section id="AgregarTarea">
-            <h2 id="cabecera">Agregar Tarea</h2>
+            <h2>Agregar Tarea</h2>
             <form class="agregar-actividad">
                 <label for="titulo">Titulo de tarea</label>
-                <input type="text" placeholder="Titulo de tarea" id="titulo" required maxlength="80">
+                <input class="campo" type="text" placeholder="Titulo de tarea" id="titulo" required maxlength="80">
                 <label for="descripcion">Descripcion de la tarea</label>
-                <textarea placeholder="Describe la tarea" id="descripcion"></textarea>
+                <textarea class="campo" placeholder="Describe la tarea" id="descripcion"></textarea>
                 <label for="prioridad">Prioridad de la tarea</label>
-                <select name="prioridad" id="prioridad">
+                <select class="campo" name="prioridad" id="prioridad">
                     <option value="">Alta</option>
                     <option value="">Media</option>
                     <option value="">Baja</option>

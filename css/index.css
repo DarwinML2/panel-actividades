@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+html {
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --color-principal: #1d4ed8;
   --color-texto: #172033;
+  --color-secundario: #3b8ad4;
 }
 
 button {
@@ -12,43 +21,118 @@ button {
   font-weight: 600;
 }
 body {
-  font-size: 16px;
-  font-family: system-ui, sans-serif;
-  line-height: 1.5;
-  color: #172033;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px;
+  background: #f1f5f9;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+.navegacion .links {
+  position: relative;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: color 0.2s;
+  a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    position: relative;
+    padding: 8px 8px;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--color-secundario);
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.3s cubic-bezier(0.3, 1.2, 0.5, 1);
+  }
+  a:visited {
+    color: var(--color-secundario);
+  }
+}
 
-#cabecera {
-  color: navy;
+.navegacion .links .navegacion .links a:hover,
+.navegacion .links .on {
+  color: var(--color-secundario);
+}
+.navegacion .links a:hover::after,
+.navbar .links .on::after {
+  transform: translateX(-50%) scaleX(1);
 }
 
 .lista-actividad {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 950px;
+  margin: 20px auto;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .tarjeta-actividad {
-  padding: 1rem;
+  width: 250px;
+  padding: 30px 22px;
+  border-radius: 18px;
+  background: #f1f5f9;
+  box-shadow:
+    0 1px 1px #0f172a14,
+    0 2px 2px #0f172a14,
+    0 4px 4px #0f172a14;
   overflow: hidden;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  margin-bottom: 0.8rem;
+  font-size: 20px;
   display: grid;
-  text-align: center;
-  gap: 1rem;
+  gap: 8px;
+  p {
+    text-align: center;
+    margin-bottom: 8px;
+  }
 }
 
 .actividad-acciones {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+}
+.prioridad {
+  border-radius: 0.8rem;
+  font-size: 0.75rem;
+
+  display: inline-flex;
+  white-space: nowrap;
+  align-items: center;
+  padding: 0.25rem 0.6rem;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+.prioridad-media {
+  background-color: rgba(245, 159, 11, 0.432);
+  color: #b45309;
+}
+.prioridad-baja {
+  background-color: rgba(29, 158, 117, 0.432);
+  color: #1d9e75;
+}
+.prioridad-alta {
+  background-color: rgba(239, 68, 68, 0.432);
+  color: #dc2626;
 }
 
 .agregar-actividad {
@@ -59,4 +143,22 @@ body {
 
 .pie-pagina {
   text-align: center;
+}
+.campo {
+  width: 100%;
+  color: rgb(36, 35, 42);
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 28px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  box-shadow:
+    rgb(0 0 0 / 12%) 0px 1px 3px,
+    rgb(0 0 0 / 24%) 0px 1px 2px;
+  background: rgb(251, 251, 251);
+  transition: all 0.1s ease 0s;
+  :focus {
+    border: 2px solid rgb(124, 138, 255);
+  }
 }
